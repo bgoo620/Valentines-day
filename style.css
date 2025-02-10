@@ -1,6 +1,7 @@
 body {
   display: grid;
   place-items: center;
+  align-content: space-evenly;
   min-height: 100vh;
   overflow: hidden;
   background: #fae1dd;
@@ -154,3 +155,44 @@ body {
       transform: scaleX(.85);
   }
 }
+
+#title {
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  padding: 30px;
+  width: 100%;
+}
+
+
+#buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.options {
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  color: white;
+}
+
+#yes {
+  background-color: green;
+}
+
+#no {
+  background-color: red;
+}
+
+#buttons.show {
+  opacity: 1;
+  visibility: visible;
+}
+
